@@ -10,6 +10,14 @@ Thus, *Checkpoints* are virtual gates located along the course of the race where
 
 The check process at *Checkpoints* may vary depending on the features of the device in use. For instance, some *Checkpoints* may read UHF RFID tags; others may be based on physical keyboards where marshals type the bib numbers when competitors go through the virtual gate. 
 
+In terms of arquitecture, both *Controller* and *Checkpoint(s)* are **MQTT Clients**. These clients will be implemented using the specific [Eclipse Paho](https://www.eclipse.org/paho/) distribution, that provides solutions for all device platforms the project has. 
+
+## MQTT Broker
+
+Apart from these MQTT *pubsub* clients there is a **MQTT Broker** in charge of delivering messages. It is not repesented in the image to simplify the model. 
+
+Eclipse [Mosquitto](https://mosquitto.org/) is the implementation selected for the MQTT Broker. This Open Source MQTT v3.1/v3.1.1 Broker will be installed on a reliable device with a strong internet connection.
+
 
 ## Personae
 
