@@ -1,6 +1,6 @@
 # Components
 
-![pubsub](Components of ActivIoTy)
+![components](Components of ActivIoTy)
 
 ## *Checkpoints* and *Controller*
 
@@ -36,4 +36,4 @@ There is a public HTTP server that publish information about the system and enab
 Information will be published using Web Standards that guarantee interoperability.
 
 
-[pubsub]: ./images/components/checkpoints.png "Components in the ActivIoTy system"
+[components]: ./images/components/checkpoints.png "Components in the ActivIoTy system"
