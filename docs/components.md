@@ -1,6 +1,6 @@
 # Components
 
-![pubsub][Components of ActivIoTy]
+![pubsub](Components of ActivIoTy)
 
 ## *Checkpoints* and *Controller*
 
