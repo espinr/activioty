@@ -49,12 +49,12 @@ The reader responds with this packet:
 ```
 
 That corresponds to: 
-`A0`: head (fixed)
-`05`: Length
-`01`: Reader’s address
-`72`: Command
-`01 09`: Data (`01`: major version, `09`: minor version) -> so, *v1.9*
-`DE`: Checksum
+* `A0`: head (fixed)
+* `05`: Length
+* `01`: Reader’s address
+* `72`: Command
+* `01 09`: Data (`01`: major version, `09`: minor version) -> so, *v1.9*
+* `DE`: Checksum
 
 In order to set the working antenna (in our case, it is the #01) we send the following packet:
 
@@ -63,12 +63,12 @@ Set antenna (antenna 1):
 ```
 > A0 04 01 74 00 E7
 ```
-`A0`: head (fixed)
-`04`: Length
-`01`: Reader’s address
-`74`: Command
-`00`: Data (`00` = antenna #01)
-`E7`: Checksum
+* `A0`: head (fixed)
+* `04`: Length
+* `01`: Reader’s address
+* `74`: Command
+* `00`: Data (`00` = antenna #01)
+* `E7`: Checksum
 
 The reader responds:
 
@@ -90,15 +90,15 @@ The reader reads a tag (one or several times). In case the reader detects a tag 
 < A0 13 01 89 04 30 00 E2 00 30 16 66 13 01 21 15 50 74 EF 45 BF
 ```
 This packet means:
-`A0`: head (fixed)
-`13`: Length
-`01`: Reader’s address
-`89`: Command
-`04`: Antenna frequency
-`30 00`: Tag’s PC.
-`E2 00 30 16 66 13 01 21 12 50 74 EF`: **EPC**
-`45`: RSSI (The RSSI when tag is identified.)
-`BF`: Checksum
+* `A0`: head (fixed)
+* `13`: Length
+* `01`: Reader’s address
+* `89`: Command
+* `04`: Antenna frequency
+* `30 00`: Tag’s PC.
+* `E2 00 30 16 66 13 01 21 12 50 74 EF`: **EPC**
+* `45`: RSSI (The RSSI when tag is identified.)
+* `BF`: Checksum
 
 The reader may send as many packets as it reads. After those packets, the reader returns a *success reading* command (or failure):
 
