@@ -1,8 +1,11 @@
 # *Checkpoint*: UHF RFID Reader + Python
 
-Each competitor taking part in a competition is identified by two unique IDs: 
+This Checkpoint is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader control and the checkpoint will be coded in Python. The MQTT Client is implemented using the Paho Python module.
+
+It is important to understand that each competitor taking part in a competition is identified by two unique IDs: 
 1. the bib number: alphanumeric string that follows the organizers standards (it could be an alias, surname or bib number). In this case, an unsigned integer; and
 2. an EPC (Electronic Product Code) corresponding to the RFID tag attached to their bib number. This tag follows the EPC C1G2 (Class 1 Generation 2) standard.
+
 
 ## IND903 UHF RFID Reader
 
