@@ -1,6 +1,6 @@
 #eclipse
 .settings/
-.project/
+.project
 
 #binaries
 __pycache__/
