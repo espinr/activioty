@@ -3,9 +3,10 @@
 The platform is based on the pub-sub paradigm. This means that some components (*publishers* or *senders*) send messages to a central point, called *broker*, that delivers the messages to other components (*subscribers* or *receivers*) interested in receiving the information send by the *publishers*.
 
 Just as a reminder of what the system does: 
-1- *Checkpoints* registers { competitor's ID + timestamp }. So, these are the *publishers*
-2- *Controller*(s) collect the information sent by *Checkpoints* and process the information. So, this is one of the *subscribers*.
-3- Other *subscribers* may perform other activities (i.e., visualizations, integration with third party services, etc.)  
+
+1. *Checkpoints* registers { competitor's ID + timestamp }. So, these are the *publishers*
+2. *Controller*(s) collect the information sent by *Checkpoints* and process the information. So, this is one of the *subscribers*.
+3. Other *subscribers* may perform other activities (i.e., visualizations, integration with third party services, etc.)  
 
 ![pubsub](ActivIoTy PubSub Process)
 
