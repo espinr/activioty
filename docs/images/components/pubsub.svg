@@ -14,7 +14,7 @@ src:url("data:font/woff;charset=utf-8;base64,d09GRgABAAAAARdUAA4AAAAB3OwAAQAAAAA
 <polygon id="s448246216" points="420.0,359.99982 540.00006,359.99982 540.00006,419.99982 420.0,419.99982 " fill="none" stroke-width="2.0" stroke="rgb(0,0,0)"/>
 <g id="t448246216">
 <text x="460.00003" y="375.2918" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="40.0">broker</text>
-<text x="435.50003" y="393.8719" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="89.0">(Raspberry Pi)</text>
+<text x="435.50003" y="393.8719" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="89.0">(UP squared)</text>
 <text x="444.00003" y="412.45197" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="72.0">[Mosquitto]</text>
 </g>
 </g>
@@ -158,7 +158,7 @@ src:url("data:font/woff;charset=utf-8;base64,d09GRgABAAAAARdUAA4AAAAB3OwAAQAAAAA
 <g id="g481935139">
 <polygon id="s529074613" points="700.0,420.0 900.0,420.0 899.99994,560.0 700.0,559.9998 " fill="none"/>
 <g id="t481935139">
-<text x="705.0" y="438.13184" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic /activioty/checkpoint4</text>
+<text x="705.0" y="438.13184" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic checkpoint4/checkin</text>
 <text x="705.0" y="456.7119" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="67.0">message =</text>
 <text x="705.0" y="475.292" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="5.0">{</text>
 <text x="705.0" y="493.87207" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="138.0">checkpointId : 'xxxxxx',</text>
@@ -170,7 +170,7 @@ src:url("data:font/woff;charset=utf-8;base64,d09GRgABAAAAARdUAA4AAAAB3OwAAQAAAAA
 <g id="g23776802">
 <polygon id="s88897610" points="620.0,99.99999 820.0,99.99999 820.0,239.99998 620.0,239.9998 " fill="none"/>
 <g id="t23776802">
-<text x="625.0" y="118.131836" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic /activioty/checkpoint3</text>
+<text x="625.0" y="118.131836" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic checkpoint3/checkin</text>
 <text x="625.0" y="136.71191" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="67.0">message =</text>
 <text x="625.0" y="155.29199" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="5.0">{</text>
 <text x="625.0" y="173.87207" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="138.0">checkpointId : 'xxxxxx',</text>
@@ -182,7 +182,7 @@ src:url("data:font/woff;charset=utf-8;base64,d09GRgABAAAAARdUAA4AAAAB3OwAAQAAAAA
 <g id="g161640357">
 <polygon id="s24245179" points="280.0,20.0 480.0,20.0 480.0,160.0 280.0,159.99982 " fill="none"/>
 <g id="t161640357">
-<text x="285.0" y="38.131836" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic /activioty/checkpoint2</text>
+<text x="285.0" y="38.131836" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic checkpoint2/checkin</text>
 <text x="285.0" y="56.711914" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="67.0">message =</text>
 <text x="285.0" y="75.29199" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="5.0">{</text>
 <text x="285.0" y="93.87207" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="138.0">checkpointId : 'xxxxxx',</text>
@@ -194,7 +194,7 @@ src:url("data:font/woff;charset=utf-8;base64,d09GRgABAAAAARdUAA4AAAAB3OwAAQAAAAA
 <g id="g124150714">
 <polygon id="s325710040" points="19.99997,220.00002 219.99997,220.00002 219.99997,360.0 19.999964,359.99982 " fill="none"/>
 <g id="t124150714">
-<text x="24.999962" y="238.13184" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic /activioty/checkpoint1</text>
+<text x="24.999962" y="238.13184" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="175.0">topic checkpoint1/checkin</text>
 <text x="24.999962" y="256.7119" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="67.0">message =</text>
 <text x="24.999962" y="275.292" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="5.0">{</text>
 <text x="24.999962" y="293.87207" font-family="Helvetica" fill="rgb(0,0,0)" font-size="14" textLength="138.0">checkpointId : 'xxxxxx',</text>
