@@ -1,6 +1,6 @@
 # Checkpoints
 
-*Checkpoints* are those components of ActivIoTy that performs timekeeping activities. They are 'virtual gates' where competitors check-in to complete the full itinerary of the race.
+*Checkpoints* are those components of Activ-IoTy that performs timekeeping activities. They are 'virtual gates' where competitors check-in to complete the full itinerary of the race.
 
 The objective of a *checkpoint* is to register what competitor is at that location and the time when they checked in.
 
