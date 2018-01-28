@@ -15,5 +15,13 @@ Activ-IoTy is a project, part of the **[Eclipse Open IoT Challenge 4.0](https://
 * **Full range of devices**: *Checkpoints* are based on a wide range of technologies to register competitors (automatic RFID, manual keyboard) and devices (Arduino One, Intel UP2, Rapsberry Pi) connected through different ways (Ethernet, WiFi, 3G). Implementations depend on the specific needs of the organizer and the physical requirements of the race. 
 * **Semantic interoperability**: Results collected and managed by the Controller are described and published on the Web using standard formats and vocabularies ([JSON-LD](https://json-ld.org/), [OpenTrack vocabularies](https://github.com/w3c/opentrack-cg), [schema.org](http://schema.org)). This enables accessibility and universality on the Web. 
 
+## More information 
+
+* Main [components of Activ-IoTy](./docs/components.md)
+  * [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./docs/checkpoints/rfid-reader-python/rfid-python.md)
+* [Protocols and foundations of Activ-IoTy](./docs/protocols.md)
+* [MQTT and Workflow of Activ-IoTy](./docs/pubsub.md)
+ 
+
 [mainlogo]: ./docs/images/logo/activIoTy.svg "Logo of ActivIoTy"
 [infographic]: ./docs/images/infographic.png "Components of ActivIoTy"
