@@ -8,6 +8,6 @@ Checkpoints are fully configurable and can be made of different IoT components t
 
 For this pilot, I developed several *checkpoints* with different devices and platforms to simulate a wide range of racing scenarios.
 
-* [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./rfid-reader-python/rfid-python)
+* [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./rfid-reader-python/rfid-python.md)
  
 
