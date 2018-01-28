@@ -16,6 +16,7 @@ Activ-IoTy is a project, part of the **[Eclipse Open IoT Challenge 4.0](https://
 * ***Checkpoints***: Checkpoints are devices placed along the course that will register when competitors pass through a virtual gate. Competitors have unique IDs that will be stored with a timestamp. That information will be stored locally and  send to a MQTT queuing system.
 
    [MQTT and Workflow of Activ-IoTy](./docs/pubsub.md)
+   
    [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./docs/checkpoints/rfid-reader-python/rfid-python.md)
 
 * ***Controller***: Controller takes control of the competition. A (human) official acts as starter of the race, setting a timestamp that serves as reference for all competitors' partial and full results. The controller is MQTT-subscribed, waiting for intermediate results when checkpoints send their information. 
