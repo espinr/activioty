@@ -22,8 +22,8 @@
 Adafruit_CC3000 cc3000 = Adafruit_CC3000(ADAFRUIT_CC3000_CS, ADAFRUIT_CC3000_IRQ, ADAFRUIT_CC3000_VBAT, SPI_CLOCK_DIVIDER);
 
 // Wifi Configuration SSID + Pasword + Security Method 
-#define WLAN_SSID       "mostruofone"
-#define WLAN_PASS       "6204362420000000000"
+#define WLAN_SSID       "xxxxxxxxxxxx"
+#define WLAN_PASS       "xxxxxxxxxxxx"
 // Security can be WLAN_SEC_UNSEC, WLAN_SEC_WEP, WLAN_SEC_WPA or WLAN_SEC_WPA2
 #define WLAN_SECURITY   WLAN_SEC_WPA2
 
