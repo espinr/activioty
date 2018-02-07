@@ -182,7 +182,7 @@ message = {
 
 ## Testing, testing
 
-And, this is me having fun testing the system with real RFID tags, and simulating `checkins` in the kitchen:
+And, this is me, having fun and testing the system with real RFID tags in the kitchen:
 
 <a href="https://youtu.be/kmptDorc3zw" target="_blank"><img src="http://img.youtube.com/vi/kmptDorc3zw/0.jpg" 
 alt="Testing checkpoint at home" style="max-width:100%; border: 5px #cccccc solid;" /></a>
