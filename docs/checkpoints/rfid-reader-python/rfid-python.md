@@ -119,7 +119,7 @@ The driver to control the UHF RDIF module has been written in Python (v3 because
 
 You can find all the Python classes and scripts in the repository. As mentioned before, not all commands are implemented but there are some classes that can be used to create packets, including checksums.  
 
-> Do not relay too much on the scripts I created. Believe me, I did my best but it was my first experience with this language :)
+> Do not rely too much on the scripts I created. Believe me, I did my best but it was my first experience with this language :)
 
 The final running script will create a `Checkpoint` object that includes a `Ind903Reader` instance. The workflow will always be:
 
