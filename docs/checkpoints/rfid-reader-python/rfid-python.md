@@ -1,6 +1,6 @@
 # *Checkpoint*: UHF RFID Reader + Raspberry Pi + Paho for Python
 
-This Checkpoint is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader control and the checkpoint will be coded in Python. The MQTT Client is implemented using the Paho Python module.
+This Checkpoint is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader control and the checkpoint will be coded in Python. The MQTT Client is implemented using the Paho Python module. The libraries can be found [in the repository](../../../python).
 
 It is important to understand that each competitor taking part in a competition is identified by two unique IDs: 
 1. the bib number: alphanumeric string that follows the organizers standards (it could be an alias, surname or bib number). In this case, an unsigned integer; and
