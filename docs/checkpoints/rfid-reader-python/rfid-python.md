@@ -1,6 +1,6 @@
 # *Checkpoint*: UHF RFID Reader + Raspberry Pi + Paho for Python
 
-This Checkpoint is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader control and the checkpoint will be coded in Python. The MQTT Client is implemented using the Paho Python module.
+This Checkpoint is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader control and the checkpoint will be coded in Python. The MQTT Client is implemented using the Paho Python module. The libraries can be found [in the repository](../../../python).
 
 It is important to understand that each competitor taking part in a competition is identified by two unique IDs: 
 1. the bib number: alphanumeric string that follows the organizers standards (it could be an alias, surname or bib number). In this case, an unsigned integer; and
@@ -119,7 +119,7 @@ The driver to control the UHF RDIF module has been written in Python (v3 because
 
 You can find all the Python classes and scripts in the repository. As mentioned before, not all commands are implemented but there are some classes that can be used to create packets, including checksums.  
 
-> Do not relay too much on the scripts I created. Believe me, I did my best but it was my first experience with this language :)
+> Do not rely too much on the scripts I created. Believe me, I did my best but it was my first experience with this language :)
 
 The final running script will create a `Checkpoint` object that includes a `Ind903Reader` instance. The workflow will always be:
 
@@ -182,7 +182,7 @@ message = {
 
 ## Testing, testing
 
-And, this is me having fun testing the system with real RFID tags, and simulating `checkins` in the kitchen:
+And, this is me, having fun and testing the system with real RFID tags in the kitchen:
 
 <a href="https://youtu.be/kmptDorc3zw" target="_blank"><img src="http://img.youtube.com/vi/kmptDorc3zw/0.jpg" 
 alt="Testing checkpoint at home" style="max-width:100%; border: 5px #cccccc solid;" /></a>
