@@ -1,6 +1,8 @@
 # Checkpoint: IR Keypad on Arduino
 
-Having in mind a less optimistic scenario –low budget, few resources–, I've implemented another checkpoint using a different solution. This option would cost less than $50 and it's really easy to use.
+Having in mind a less optimistic scenario –low budget, few resources–, I've implemented another checkpoint using a different solution. This option would cost less than $50 and it's really easy to use. It can be developed with a components from a basic Arduino-like kit. 
+
+A system based on Infrared (IR) remote control, is not very reliable for our purpose since there must be a direct visual line between transmitter and receiver –likely TV remote controls. **More than a real solution, this is a proof of concept**.
 
 ![IR remote control and Arduino with the checkpoint being tested](./ir-control.jpg)
 
@@ -33,6 +35,8 @@ The checkpoint would work in the same way as the rest of checkpoints:
 
 
 ## IR Receiver and IRLIB2
+
+The transmitter in the remote control sends out a stream of pulses of infrared light (humans cannot see) when a button is pressed. A transmitter is often a light emitting diode (LED) which is built into the pointing end of the remote control handset. The infrared light pulses form a pattern unique to that button.
 
 The Arduino sketch uses the [IRLib2](https://github.com/cyborg5/IRLib2) library to perform all the management of the IR receiver. If you are interested in in-depth information about this, you can refer to [this tutorial from Adafruit](https://learn.adafruit.com/using-an-infrared-library/hardware-needed), explaining all details about IR and how to use commercial remotes within your sketch.
 
