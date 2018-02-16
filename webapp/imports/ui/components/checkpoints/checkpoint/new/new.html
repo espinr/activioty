@@ -1,0 +1,61 @@
+<template name="newCheckpoint">
+    <div class="row">
+    <div class="col s12 m8 push-m2 push-l4 l4 z-depth-1">                  
+        {{#autoForm collection=checkpointsCollection id="newCheckpointForm" type="normal" validation="blur"}}
+            <p class="flow-text">Checkpoint description:</p>
+            {{> afQuickField name='identifier' }}
+            {{> afQuickField name='name' }}
+            {{> afQuickField name='description' }}
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <label class="active">Picture</label>
+                    <div class="gallery-photos">
+                        <div class="picture placeholder" id="picture-preview">
+                            <i class="material-icons">photo_camera</i>
+                        </div>
+                    </div>
+                    <input id="new-picture-input" type="file" accept="image/*" capture>
+                </div>
+            </div>
+
+            {{> afQuickField name='picture' type='hidden'}}
+
+            <div class="row row-form-map">
+                <div class="col s12 col-form-map">
+                    {{> newCheckpointMap }}
+                </div>
+            </div>
+
+            {{> afQuickField name='latitude'}}
+            {{> afQuickField name='longitude'}}
+            <div class="row">            
+                <div class="col s12">
+                    {{#if afFieldIsInvalid name='latitude'}}
+                    <div class="red-text">Please, select a place on the map</div>
+                    {{/if}}
+                </div>
+            </div>
+            {{> afQuickField name='notes' }}
+            <div class="row">            
+                <div class="col s12 buttons">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary add-checkpoint-button">Add</button>
+                        <button type="reset" class="btn btn-default goBack-button">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        {{/autoForm}}
+    </div>
+    </div>
+    <div id="modalConfirmDeletePicture" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Are you sure?</h4>
+            <p>Do you want to remove the picture?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-ok btn-flat ">OK, Remove</a>            
+            <a href="#!" class="modal-action modal-close btn-flat ">Cancel</a>
+        </div>    
+    </div>            
+</template>

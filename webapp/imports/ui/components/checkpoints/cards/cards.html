@@ -1,0 +1,51 @@
+<template name="cardsCheckpoints">
+    <div class="container grid-checkpoints">
+      {{#if searching}}
+        <div class="dialogSpinner">
+            {{> spinner }}
+        </div>
+      {{else}}    
+        {{#each checkpoints}}
+        <div class="card small">
+          <div class="card-image">
+            {{#if picture}}
+            <img class="activator" src="{{picture}}" alt="{{checkpoint.name}}">
+            {{else}}
+            <img class="activator" src="/img/checkpoint.jpg" alt="Generic Checkpoint">
+            {{/if}}
+            <span class="card-title truncate">{{name}}</span>
+          </div>
+          <div class="card-content">
+            <span class="card-title activator truncate small">{{identifier}} <i class="material-icons right">more_vert</i></span>
+            <div class="card-action">
+              <a href="{{pathFor 'checkpoints.edit' checkpointId=_id}}">Edit</a>
+              <a href="./checkpoints?checkpointId={{_id}}" class="viewOnMap-button">Map</a>
+            </div>
+          </div>  
+          <div class="card-reveal">
+            <span class="card-title truncate small">{{identifier}}<i class="material-icons right">close</i></span>
+            <div class="row">
+              <div class="col s12 valign-wrapper">
+                <i class="material-icons tiny">label_outline</i> {{name}}
+              </div> 
+            </div>
+            <div class="row">
+              <div class="col s12 valign-wrapper">
+                <i class="material-icons tiny">label_outline</i> {{description}}
+              </div> 
+            </div>
+            <div class="row">
+              <div class="col s12 valign-wrapper">
+                <blockquote>{{notes}}</blockquote>
+              </div> 
+            </div>
+            <div class="card-action">
+              <a href="{{pathFor 'checkpoints.edit' checkpointId=_id}}">Edit</a>
+              <a href="/checkpoints?checkpointId={{_id}}" class="viewOnMap-button">Mapa</a>
+            </div>              
+          </div>                  
+        </div>
+        {{/each}}
+      {{/if}}
+    </div>
+  </template>

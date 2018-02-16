@@ -1,0 +1,37 @@
+<template name="checkpointsMain">  
+  <nav class="z-depth-8 search-filter">
+      <div class="nav-wrapper white">
+          <form autocomplete="off">
+          <div class="input-field">
+              <input id="search" type="search" placeholder="Search...">
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons reset-button">close</i>
+          </div>
+          </form>
+      </div>
+  </nav>
+  <div id="cards" class="col s12 grey lighten-4 tab-panel">
+    {{> cardsCheckpoints checkpointId=checkpointId }}
+  </div>
+  <div id="map" class="col s12 tab-panel">
+      {{> checkpointsMap checkpointId=checkpointId }}
+  </div>
+  {{ #if loading }}
+    {{> spinner }}
+  {{ /if }}
+</template>
+
+<template name="checkpointsNav">
+    <div class="fixed-action-btn" >
+      <a href="{{pathFor 'checkpoints.new' }}" id="newCheckpoint-button" class="btn-floating btn-large waves-effect waves-light red">
+        <i class="material-icons">add</i>
+      </a>
+    </div>  
+    {{> mainNav }} 
+    <div class="nav-content pink darken-1">
+      <ul class="tabs tabs-transparent tabs-fixed-width">
+        <li class="tab col s4"><a href="#cards"><i class="material-icons">view_module</i></a></li>
+        <li class="tab col s4"><a class="active" href="#map"><i class="material-icons">map</i></a></li>
+      </ul>
+    </div>
+</template>

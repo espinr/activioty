@@ -1,0 +1,52 @@
+<template name="newProfile">
+  <div class="row">
+    <div class="col s12 m8 push-m2 push-l4 l4 z-depth-1">
+      <p class="flow-text">Dinos algo sobre ti para continuar</p>
+      {{#autoForm collection=usersCollection doc=currentUser  schema=usersSchema
+            id="newProfileForm" type="update" validation="submitThenBlur" trimStrings="true" removeEmptyStrings="true"}}
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="text" value="{{ email }}" disabled="true">
+            <label class="active">Correo electrónico</label>
+          </div>
+        </div>  
+        {{> afQuickField name='profile.firstName' title='Campo obligatorio' }}
+        {{> afQuickField name='profile.lastName' title='Required' }}
+        {{> afQuickField name='profile.passport'  }}
+        {{> afQuickField name='profile.club'  }}
+        {{> afQuickField name='profile.phone' type='tel' }}
+        {{> afQuickField name='profile.locality' }}
+        {{> afQuickField name='profile.notes' type="textarea" rows=4 }}
+        {{> afQuickField name='profile.name'}}
+        <div class="row">            
+          <div class="col s12 privacy-policy">
+            <span class="help-block">This information will be stored in a secure database. The only purpose of this
+              data collection is devilvering a successful service, preserving user's privacy. In order to continue, you must
+              accept the 
+              <a class="privacyPolicy modal-trigger" data-target="modalPrivacyPolicy" href="#modalPrivacyPolicy">Privacy Policy</a>.</span>
+          </div>
+        </div>
+        <div class="row">            
+          <div class="col s12">
+            {{> afQuickField name='profile.acceptPolicy' type='boolean-checkbox' label='Acept' title='Required'}}
+          </div>          
+        </div>
+        <div class="row">            
+            <div class="col s12 buttons">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary add-checkpoint-button">Continue</button>
+                </div>
+            </div>
+        </div>
+      {{/autoForm}}
+    </div>
+  </div>
+  <div id="modalPrivacyPolicy" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      {{> privacyPolicy }}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close btn-flat ">Close</a>
+    </div>    
+  </div>    
+</template>

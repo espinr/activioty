@@ -1,0 +1,33 @@
+<template name="mainNav">
+  <div class="nav-wrapper pink darken-1">
+    <a href="{{ pathFor 'App.home' }}" class="brand-logo"><img src="/img/logo_white.svg" alt="Activ-IoTy"></a>
+    <a href="#" data-activates="menuMobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    <!-- Drop-down menu for profile in full mode -->
+    <ul id="dropdownProfile" class="dropdown-content">
+      <li><a href="{{ pathFor 'App.editProfile' }}" id="editProfileButton">My Profile</a></li>
+      <li><a href="#!" id="changePasswordButton">Change password</a></li>
+      <li class="divider"></li>
+      <li><a href="#!" id="logoutButton">Logout</a></li>
+    </ul>   
+    <ul id="menuMobile" class="side-nav">
+      <li class="black-text"><a href="#" id="closeMenuButton"><i class="material-icons large">chevron_left</i></a></li>
+      <li class="{{isActiveRoute 'races.dashboard'}}"><a href="{{pathFor 'races.dashboard' }}">Races</a></li>      
+      <li class="{{isActiveRoute 'checkpoints.dashboard'}}"><a href="{{pathFor 'checkpoints.dashboard' }}">Checkpoints</a></li>
+      <li class="{{isActiveRoute 'admin.users'}}"><a href="{{pathFor 'admin.users' }}">Athletes</a></li>
+      <li class="divider"></li>
+      <li><a href="{{ pathFor 'App.editProfile' }}" id="editProfileButton">My Profile</a></li>
+      <li><a href="#!" id="changePasswordButton">Change Password</a></li>
+      <li><a href="#!" id="logoutButton">Logout</a></li>
+    </ul>
+    <!-- Menu in full mode -->
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li class="{{isActiveRoute 'races.dashboard'}}"><a href="{{pathFor 'races.dashboard' }}">Races</a></li>      
+      <li class="{{isActiveRoute 'checkpoints.dashboard'}}"><a href="{{pathFor 'checkpoints.dashboard' }}">Checkpoints</a></li>
+      {{#if isInRole 'admin'}}
+        <li class="{{isActiveRoute 'admin.users'}}"><a href="{{pathFor 'admin.users' }}">Athletes</a></li>
+      {{/if}}
+      <li><a class="dropdown-button" href="#!" data-activates="dropdownProfile">{{ username }}<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>  
+</template>

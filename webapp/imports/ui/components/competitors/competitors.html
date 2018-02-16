@@ -1,0 +1,44 @@
+<template name="competitorsMain">  
+
+    <div class="fixed-action-btn assign-bibs-button" >
+      <a href="#" id="assign-bibs-button" class="btn-floating btn-large waves-effect waves-light pink accent-4">
+          <i class="material-icons">playlist_add_check</i>
+      </a>
+    </div>  
+    
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Club</th>
+          <th>Bib Id</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{ #each athlete in athletes }}
+        {{#let idForm=(getIdForm athlete._id) idSelect=(getIdSelect athlete._id) }}
+        <tr>
+          <td><input type="checkbox" class="filled_in" data-athlete-name="{{athlete.profile.name}}" name="{{athlete._id}}" id="{{athlete._id}}" ><label for="{{athlete._id}}">&nbsp;</label></td>
+          <td>{{ athlete.profile.lastName }}</td>
+          <td>{{ athlete.profile.firstName }}</td>
+          <td>{{ athlete.profile.club }}</td>
+          <td>
+            {{#autoForm collection=competitorsCollection id=idForm type="normal" validation="blur"}}
+              {{> afQuickField name='bibId' options=identifiers label=" "}}
+              {{> afQuickField name='epc' type='hidden'}}
+              {{> afQuickField name='idUser' type='hidden' }}
+              {{> afQuickField name='nameUser' type='hidden' }}
+              {{> afQuickField name='idRace' type='hidden' }}
+            {{ /autoForm }}
+          </td>
+        </tr>
+        {{ /let }}
+      {{ /each }}
+    </tbody>
+  </table>
+  </div>
+
+</template>
