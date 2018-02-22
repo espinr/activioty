@@ -49,15 +49,17 @@ class Checkpoint(object):
             competitor["bib"] = idCompetitorBibNumber;
             
         messageCheckin = { "checkpoint" : self.id , "timestamp" : self.getTimestamp(), "competitor" : competitor }
-        publish.single(self.TOPIC_CHECKIN, json.dumps(messageCheckin), hostname=self.mqttBrokerHost)
-        print(self.TOPIC_CHECKIN + " topic to MQTT:")
+        topic = self.id + "/" + self.TOPIC_CHECKIN
+        publish.single(topic, json.dumps(messageCheckin), hostname=self.mqttBrokerHost)
+        print(topic + " topic to MQTT:")
         print(json.dumps(messageCheckin))
-        
+        pic
         
     def execute(self):
         messageReady = { "checkpoint" : self.id , "timestamp" : self.getTimestamp() }  
-        publish.single(self.TOPIC_READY, json.dumps(messageReady), hostname=self.mqttBrokerHost)
-        print(self.TOPIC_READY + " topic to MQTT:")
+        topic = self.id + "/" + self.TOPIC_READY
+        publish.single(topic, json.dumps(messageReady), hostname=self.mqttBrokerHost)
+        print(topic + " topic to MQTT:")
         print(json.dumps(messageReady))        
         self.reader.initialize()
         self.reader.doInventory(self.checkinCompetitor)
