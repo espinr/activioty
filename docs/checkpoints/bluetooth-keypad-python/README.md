@@ -6,7 +6,9 @@ Athletics events are usually controlled by officials with different roles such a
 
 Since all athletes must wear a visible bib identifier, this implementation is compatible with the existing rules of official competitions. Keypad may be substituted by a complete keyboard. Of course, the keypad could be a capacitive screen (i.e., tablet, smartphone, etc.) but it is probed that data input operators are more efficient with physical typing devices. Also they may be robust, even waterproof.  
 
-This solution only needs a bluetooth input device connected to a Raspberry Pi, or similar.    
+This solution only needs a bluetooth input device connected to a Raspberry Pi, or similar.
+
+![Bluetooth keypad and Raspberry Pi 3](https://raw.githubusercontent.com/espinr/activioty/master/docs/images/implementation/keypad_bluetooth_rpi.jpg)
 
 The official located nearby the checkpoint **type the bib number** and **press enter** to register athletes' *checkinw*. The system will send the information (bib number + timestamp) of this `checkin` automatically.  
 
