@@ -130,7 +130,7 @@ if __name__ == '__main__':
     checkpoint.execute() 
 ```
 
-This approach may be extended to other *checkin* mechanisms such as bar-code readers or computer vision analyzers. 
+This approach may be extended to other *checkin* mechanisms such as bar-code readers or computer vision analyzers. Perhaps for the next release ;-) 
 
   
 
