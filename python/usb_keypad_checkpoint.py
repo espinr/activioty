@@ -14,5 +14,5 @@ from usb_keypad_reader import usb_keypad_reader
 
 if __name__ == '__main__':
     reader = usb_keypad_reader.USBKeypadReader()
-    checkpoint = checkpoint.Checkpoint('RPi-keypad', reader, 'activioty.ddns.net')
+    checkpoint = checkpoint.Checkpoint('Keypad-1', reader, 'activioty.ddns.net')
     checkpoint.execute()
