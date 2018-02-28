@@ -1,0 +1,36 @@
+<template name="competitionMain">
+    <div class="fixed-action-btn messages-btn" >
+        <button data-target="messagesModal" class="btn modal-trigger brown lighten-4">checkins</button>
+      </div>  
+  <div class="fixed-action-btn stopwatch">
+    {{stopwatch}}
+  </div>
+  {{> competitionMap raceId=raceId currentRace=currentRace }}
+  <div class="fixed-action-btn stopwatch-btn" >
+    <a href="#" id="startCompetition-button" class="btn-floating btn-large waves-effect waves-light">
+      <i class="material-icons">play_arrow</i>
+    </a>
+  </div>
+  <div id="modalJsonResults" class="modal">
+      <div class="modal-content">
+        <pre class="json">
+        </pre>
+      </div>
+  </div>    
+  
+    <div id="messagesModal" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Checkins</h4>
+      <table>
+        <thead>
+          <tr><th>CheckpointID</th><th>EPC</th><th>bib#</th><th>timestamp</th></tr>
+        </thead>
+        <tbody>
+          {{ #each checkins }}
+            <tr><td>{{ checkpointId }}</td><td>{{ epc }}</td><td>{{ bibId }}</td><td>{{ timestamp }}</td></tr>
+          {{ /each }}
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</template>

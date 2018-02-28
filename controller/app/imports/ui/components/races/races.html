@@ -1,0 +1,32 @@
+<template name="racesMain">  
+    <nav class="z-depth-8 search-filter">
+        <div class="nav-wrapper white">
+            <form autocomplete="off">
+            <div class="input-field">
+                <input id="search" type="search" placeholder="Search...">
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons reset-button">close</i>
+            </div>
+            </form>
+        </div>
+    </nav>              
+    {{ #if loading }}
+        {{> spinner }}
+     {{ else }}
+        {{> reactiveTable 
+            class="table bordered striped racesTable" 
+            collection=races  
+            filters=tableFilters
+            showFilter=false
+            settings=settings }}
+    {{ /if }}
+</template>
+      
+<template name="racesNav">
+    <div class="fixed-action-btn" >
+    <a href="{{pathFor 'races.new' }}" id="newRace-button" class="btn-floating btn-large waves-effect waves-light red">
+        <i class="material-icons">add</i>
+    </a>
+    </div>  
+    {{> mainNav }} 
+</template>

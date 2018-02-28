@@ -1,0 +1,29 @@
+version: '3.0'
+
+services:
+  app:
+    build: ./app/
+    ports:
+      - "3003:3000"
+    links:
+      - mongo
+      - smtp
+    depends_on:
+      - mongo    
+    environment:
+      - MAIL_URL=smtp://smtp:25
+      - ROOT_URL=http://localhost
+      - MONGO_URL=mongodb://mongo:27017/meteor
+    container_name: activioty_app
+
+  mongo:
+    image: mongo:3.7
+    command: mongod --storageEngine=wiredTiger
+    volumes:
+      - './data:/data/db'
+    container_name: activioty_mongo
+
+  smtp:
+    image: namshi/smtp:latest
+    container_name: activioty_smtp
+
