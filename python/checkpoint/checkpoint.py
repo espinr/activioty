@@ -53,7 +53,6 @@ class Checkpoint(object):
         publish.single(topic, json.dumps(messageCheckin), hostname=self.mqttBrokerHost)
         print(topic + " topic to MQTT:")
         print(json.dumps(messageCheckin))
-        pic
         
     def execute(self):
         messageReady = { "checkpoint" : self.id , "timestamp" : self.getTimestamp() }  

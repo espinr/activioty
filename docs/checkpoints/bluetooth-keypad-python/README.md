@@ -1,6 +1,6 @@
 # Checkpoint: Bluetooth Keypad on Rasperry Pi
 
-This solution for a checkpoint is an cheap option to implement another type of checkpoint. 
+This is a cheap option to implement an Activ-IoTy compatible checkpoint. 
 
 Athletics events are usually controlled by officials with different roles such as: judges, timekeepers and starters. Other competitions must rely on officials with other roles, even volunteers or marshals. This solution enables officials and volunteers to register athletes at checkpoints using a simple physical keypad to type athlete's bib numbers.
 

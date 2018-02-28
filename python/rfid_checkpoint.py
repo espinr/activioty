@@ -14,5 +14,5 @@ from ind903_reader import ind903_reader
 
 if __name__ == '__main__':
     reader = ind903_reader.Ind903Reader('/dev/ttyUSB0', 115200)
-    checkpoint = Checkpoint('RFID-Reader-1', reader, 'activioty.ddns.net')
+    checkpoint = checkpoint.Checkpoint('RFID-Reader-1', reader, 'activioty.ddns.net')
     checkpoint.execute()
