@@ -112,6 +112,8 @@ This data is served in JSON-LD, following the [OpenTrack model](https://w3c.gith
 
 ![Results export](../images/controller/results.jpg)
 
+Check the [results generated in this example](./sample_results.jsonld) –perhaps the final IRIs does not resolve, it's just an example. 
+
 ## Implementation
 
 The *Controller* is developed in [Meteor](https://www.meteor.com), an open source platform for Web, mobile, and desktop applications build in JavaScript. The resulting mobile web application is compatible with all the latest browsers and it has been designed using the responsive web design approach, in concrete through the [Materialize CSS](http://materializecss.com/) framework.
