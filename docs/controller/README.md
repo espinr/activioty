@@ -101,6 +101,7 @@ The competition may be followed in real time as shown in the full video –the v
 #### Complete video:
 
 [![Activ-IoTy Controller screenshot](../images/controller/race.png)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
+Check the full video at http://www.youtube.com/watch?v=nTlSV7WbGoE
   
 
 ### Results in Open Format
