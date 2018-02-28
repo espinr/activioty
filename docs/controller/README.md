@@ -18,7 +18,7 @@ Users that can sign-up into the platform and submit their profiles.
 
 Creation/edition of *checkpoints*. This feature allows describing checkpoints that can be located on a map. Checkpoints are identified by their ID.
 
-![Checkpoints management](../images/controller/newcheckpoint.gif)
+![Checkpoints management](../images/controller/newcheckpoint.png)
 
 ### Race Definition
 
@@ -26,7 +26,7 @@ Creation/edition of races. We can describe races, including a [geo-JSON](http://
 
 Obviously, only one *Checkpoint* can be at the finish line (it has to be selected using a radio button).
 
-![Race management](../images/controller/newrace.gif)
+![Race management](../images/controller/newrace.png)
 
 ### Start List Creation
 
@@ -50,9 +50,9 @@ Bib identifiers must be linked to RFID tags. For this example, I use this map of
 For this prototype, I've populated the database, loading a JSON file directly. 
 
 
-The following GIF shows the process of creating the start list of a race. All athletes shown are the users registered in the system. The administrator may assign bib numbers to athletes directly. 
+The following picture shows the start list of a race. All athletes shown are the users registered in the system. The administrator may assign bib numbers to athletes directly. 
 
-![Creation of start list](../images/controller/startlist.gif)
+![Creation of start list](../images/controller/startlist.png)
 
 
 ### Real-time Competition
@@ -98,7 +98,9 @@ MESSAGE:
 
 The competition may be followed in real time as shown in the full video –the video was speeded up to show just the relevant events: readiness of checkpoints and *checkins* at all checkpoints. On the right hand side, there are two terminals running Mosquitto subscribers to see the real messages processed by the controller. 
 
-[![Activ-IoTy Controller screenshot](http://img.youtube.com/vi/nTlSV7WbGoE/0.jpg)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
+#### Complete video:
+
+[![Activ-IoTy Controller screenshot](../images/controller/race.png)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
   
 
 ### Results in Open Format
