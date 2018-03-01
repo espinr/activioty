@@ -315,9 +315,16 @@ This pilot illustrates how to the data can be processed and visualized. Other se
 
 ## Deployment and testing
 
+*Activ-IoTy Controller* is deployed on a UPsquared I have at home. 
+
 ![UPsquared](../images/implementation/upsquared.jpg)
 
-*Activ-IoTy Controller* is deployed on a UPsquared I have at home. I'll post the URL for you to test it.
+We have done several tests in the real World.
+ 
+![Me with a RFID tag](../images/implementation/testing_run.png)
+
+I'll post the URL of the controller for you to test it if you want.
+
 
 
 
