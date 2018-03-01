@@ -1,2 +1,6 @@
 .project
+.settings
+.classpath
+.local
 .pydevproject
+/bin/
