@@ -26,6 +26,7 @@ import '../../../ui/components/races/race/new/new.js';
 import '../../../ui/components/races/race/edit/edit.js';
 import '../../../ui/components/competition/competition.js';
 import '../../../ui/components/competitors/competitors.js';
+import '../../../ui/components/tracker/update/update.js';
 import '../../../ui/components/policies/privacy-policy/privacy-policy.js';
 
 
@@ -61,6 +62,13 @@ const publicRoutes = FlowRouter.group({
       }
     },
   ],
+});
+
+publicRoutes.route('/tracker/update', {
+  name: 'tracker.update',
+  action(params, queryParams) {
+    BlazeLayout.render('trackerUpdate');
+  },
 });
 
 publicRoutes.route('/', {
@@ -211,7 +219,6 @@ checkpointsRoutes.route('/competitors/:raceId', {
     }
   },
 });
-
 
 /* Error handling */
 FlowRouter.notFound = {

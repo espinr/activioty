@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Email } from 'meteor/email';
 import { Roles } from 'meteor/alanning:roles';
+import { HTTP } from 'meteor/http';
 import Sntp from 'sntp';
 import RoleTypes from '../../api/users/roles/roleTypes.js';
 
@@ -36,6 +37,19 @@ Meteor.methods({
         console.log('Failed: ' + err.message);
       }
       console.log('Local clock is off by: ' + time.t + ' milliseconds');
+    });
+  },
+  httpPost(url, jsonData) {
+    console.log(`Sending ${JSON.stringify(jsonData)} POST to ${url}`);
+    HTTP.call('POST', url, {
+      data: jsonData
+    }, (error, result) => {
+      if (error) {
+        console.log(error);
+      }
+      if (result) {
+        console.log(result);
+      }
     });
   },
 });
