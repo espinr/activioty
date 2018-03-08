@@ -4,7 +4,7 @@ services:
   app:
     build: ./app/
     ports:
-      - "3003:3000"
+      - "80:3000"
     links:
       - mongo
       - smtp
@@ -12,7 +12,7 @@ services:
       - mongo    
     environment:
       - MAIL_URL=smtp://smtp:25
-      - ROOT_URL=http://localhost
+      - ROOT_URL=http://activioty.ddns.net
       - MONGO_URL=mongodb://mongo:27017/meteor
     container_name: activioty_app
 
