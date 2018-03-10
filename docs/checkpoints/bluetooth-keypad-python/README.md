@@ -132,6 +132,10 @@ if __name__ == '__main__':
     checkpoint.execute() 
 ```
 
+Any other USB keyboard is accepted as well.
+
+![Wired keyboard and Raspberry Pi 3](https://raw.githubusercontent.com/espinr/activioty/master/docs/images/implementation/checkpoint_keyboard.jpg) 
+
 This approach may be extended to other *checkin* mechanisms such as bar-code readers or computer vision analyzers. Perhaps for the next release ;-) 
 
   
