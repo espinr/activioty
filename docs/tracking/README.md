@@ -192,4 +192,5 @@ You can check the [full code on Github](https://github.com/espinr/activioty/tree
 Yes, you realized of something weird up there. The `updateValues` function makes a HTTP GET call to update values. I have some problems to use the POST method with that FONA library. Anyway, for testing purposes I created a script that posts the information from activioty.ddns.net to Ubidots.com. 
 
 I keep experimenting with this module.
+
    

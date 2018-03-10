@@ -22,6 +22,8 @@ Activ-IoTy is a project, part of the **[Eclipse Open IoT Challenge 4.0](https://
    [Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python](./docs/checkpoints/bluetooth-keypad-python/)
    
    [Checkpoint 3: IR Remote + Arduino Uno](./docs/checkpoints/ir-arduino/)
+   
+   [Pseudo-checkpoint: Fona 3G + Arduino Lilypad](./docs/tracking/)
 
 * ***Controller***: Controller takes control of the competition. A (human) official acts as starter of the race, setting a timestamp that serves as reference for all competitors' partial and full results. The controller is MQTT-subscribed, waiting for intermediate results when checkpoints send their information. 
 

@@ -11,5 +11,4 @@ For this pilot, I developed several *checkpoints* with different devices and pla
 * [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./rfid-reader-python/)
 * [Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python](./bluetooth-keypad-python)
 * [Checkpoint 3: IR Remote + Arduino Uno](./ir-arduino/)
- 
-
+* [Pseudo-checkpoint (on the move): Fona 3G + Arduino Lilypad](../tracking)
