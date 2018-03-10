@@ -4,11 +4,12 @@ I’m exploring new ways to enrich the user experience of the platform, also new
 
 Tracking the position of an athlete is really simple nowadays. Indeed, you can do it with mobile apps such as Strava. Carrying the smartphone is not a solution in this case, due to competitors try to avoid unnecessary overweights. Also, in case of runners that want to use this solution, in rainy days and on muddy trail courses is not a good idea. Also in ultra-distance races is not feasible due to battery lifetime.
 
-The solution I propose is to create an active transponder that broadcast real-time notifications with the GPS location of the competitor on a GPRS connection. 
+The solution I propose is to create an active transponder that broadcast real-time notifications with the GPS location of the competitor on a GPRS connection. The aim of this component is informing in real time about the status of the race. It will be attached (e.g., sewed to a vest) to the official or volunteer that leads the race (on car, or bike).
 
 ![Fona 3G and Arduino Lilypad](../images/implementation/fona.jpg)
 
 For this, I chose the [Adafruit FONA 3G Cellular Module](https://learn.adafruit.com/adafruit-fona-3g-cellular-gps-breakout/overview). The European Version of this module provides WCDMA + HSDPA support, with GSM backwards-compatibility, and a built-in GPS module for geolocation. It was controlled by a lightweight [Arduino Lilypad](https://www.arduino.cc/en/Main/ArduinoBoardLilyPad/) board, and powered by a 3.7v LiPo Battery. 
+     
 
 Assembly is really easy with [this Adafruit tutorial](https://learn.adafruit.com/adafruit-fona-3g-cellular-gps-breakout/assembly). This tutorial also offers a [library and examples for Arduino](https://github.com/adafruit/Adafruit_FONA). The implementation for my Lilypad was easy to adapt, just [power connections and configuration of RX, TX and RTSin (flow control)](https://learn.adafruit.com/adafruit-fona-3g-cellular-gps-breakout/arduino-wiring). If you use another Arduino model, and other pin configuration, you'll have to check its interrupt pins that are required for TX/RX.     
 
@@ -183,6 +184,8 @@ void loop() {
   delay(30000);
 }
 ```
+
+You can check the [full code on Github](https://github.com/espinr/activioty/tree/master/arduino/FONA3G_GPS).
 
 ![Fona 3G and Arduino Lilypad being tested outdoors](../images/implementation/fonatest.jpg)
 
