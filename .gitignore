@@ -3,4 +3,5 @@
 .classpath
 .local
 .pydevproject
+*.skip
 /bin/
