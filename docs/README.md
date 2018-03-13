@@ -91,7 +91,7 @@ Check all the details and code in [Github page of this component](./checkpoints/
 
 For check-in messages, it is required the checkpoint identifier (some information may be added, such as coordinates in case the checkpoint is on the move), the unique identifier of the competitor (we can have several, such as bib number and RFID tag), and the timestamp of the check-in. 
 
-Check more information about the [PubSub design in the project](./pubsub).
+Check more information about the [PubSub design in the project](./pubsub.md).
 
 
 #### 1.1.5. Scalability and further options
@@ -126,7 +126,7 @@ The cornerstone of Activ-IoTy Timekeeping is the implementation based on open st
 
 Design and implementation were focused on the use of standard technologies, open source libraries and mounted on open hardware devices. **Python v3** and **Embed C++** are the selected programming languages for the devices (*Checkpoints*); **JavaScript**, for the *Controller*.
 
-![Stack of technologies and protocols of Activ-IoTy](./images/layer-design/protocol-layer.svg)
+![Stack of technologies and protocols of Activ-IoTy](./images/layer-design/protocol-layer2.svg)
 
 Obviously, everything will run on the Internet. There are various underlying protocols since Activ-IoTy Timekeeping aims to be flexible in terms of physical connectivity. *Controllers* and *Checkpoints* may be installed in locations with strong WiFi signal (city or, town center), even with access to wired Ethernet routers, but also in the middle of the forest where we would need establish cellular GSM or 3G connections. Thus, the physical layer includes: [**IEEE 802.3 (Ethernet)**](http://www.ieee802.org/3/), [**IEEE 802.11 (WiFi)**](http://www.ieee802.org/11/) and [**WCDMA/HSDPA (3G)**](https://www.gsma.com/aboutus/gsm-technology/3gwcdma) protocols. 
 
@@ -154,11 +154,11 @@ The final design was complemented by other specific top level standards that gua
 
 As mentioned before, the running/jogging market is growing every year and competitions happen everywhere at any time. There are many applications and products that probe the importance of competitiveness in this sport. For instance, most of the sports tracking mobile apps (Strava, Nike+, Endomondo, etc.) include gamification based on performances and rankings. So, Activ-IoTy is part of this trend. 
 
-It is important to say that *reliable timekeeping systems exist already*. Indeed, this is problem solved since years ago. We are used to seeing real-time results while we watch Athletics at the Olympic Games on TV. In this case, a few big companies provide timing services to Athletics Federations to cover these competitions. Those costs are not affordable for the majority of race organizers. Another problem is the lack of open standards in those solutions, so most of them are proprietary and closed.
+It is important to say that **reliable timekeeping systems already exist**. Indeed, this is problem solved since years ago. We are used to seeing real-time results while we watch Athletics at the Olympic Games on TV. In this case, a few big companies provide timing services to Athletics Federations to cover these competitions. Those costs are not affordable for the majority of race organizers. Another problem is the lack of open standards in those solutions, so most of them are proprietary and closed.
 
 > Activ-IoTy Timekeeping brings innovation, new business opportunities and social benefits
 
-Because of this, Activ-IoTy takes advantage of this *running bubble*, enabling an open platform to enrich sports. As part of the *open* concept (i.e., open source, open hardware, open data, open standards), Activ-IoTy enables SMEs to develop new business opportunities, offering timekeeping services, including new devices and mechanisms, enhancing the final products and innovating. 
+Because of this, Activ-IoTy takes advantage of this *running bubble*, enabling an open platform to enrich sports. As part of the *open* concept (i.e., open source, open hardware, open data, open standards), **Activ-IoTy enables SMEs to develop new business opportunities, offering timekeeping services, including new devices and mechanisms, enhancing the final products, fostering innovation**. 
 
 As shown in the tests, this pilot is fully functional, but not very robust –only basic features covered, and lack of testing in depth. It could become a robust platform where build services on top of it (i.e., consultancy services, specific applications, new check-in methods, integration with third-party services, etc.). Apart from the platform, there is a clear value of the data produced. Information managed by Activ-IoT could be also part of the [open data](https://en.wikipedia.org/wiki/Open_data) ecosystem, so this brings innovation, new business opportunities, and benefits for the community.
 
