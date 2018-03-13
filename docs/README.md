@@ -1,4 +1,4 @@
-# Activ-IoTy Timekeeping - Open IoT Challenge Report
+# Activ-IoTy Timekeeping Report
 
 [![IoT Challenge 4.0](./images/rfid_case_challenge_video.jpg)](https://youtu.be/2j3yzmwb5g8)
 
