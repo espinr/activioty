@@ -1,6 +1,6 @@
 # IoT Challenge 4.0 Report
 
-![IoT Challenge 4.0](./images/rfid_case_challenge_video.jpg)
+[![IoT Challenge 4.0](./images/rfid_case_challenge_video.jpg)](https://youtu.be/2j3yzmwb5g8)
 
 Watch [the video](https://youtu.be/2j3yzmwb5g8) summarizing all the work done in this project in just 3 minutes.
 
