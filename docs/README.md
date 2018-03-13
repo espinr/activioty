@@ -4,7 +4,7 @@
 
 Watch [the video](https://youtu.be/2j3yzmwb5g8) summarizing all the work done in this project in just 3 minutes.
 
-## Description of the project
+## 1. Description of the project
 
 Athletics is perhaps the most popular sport in the world. It’s not only the most followed discipline during the Olympic Games, but Jogging is also extended in all countries as a base sport for kids or adult people. Fun races are also becoming popular, even among those who don’t do sports regularly. This trend is affecting positively to health and good habits of people.
 
@@ -29,22 +29,51 @@ The following diagram shows the main components of Activ-IoTy: **Checkpoints** a
 
 ![Components of Activ-IoTy](./images/components/checkpoints-runners-black-report.png)
 
-### *Checkpoints* 
+### 1.1. *Checkpoints* 
 
 Those components perform the timekeeping activities. They are 'virtual gates' where competitors check-in to complete the full itinerary of the race. The objective of a *checkpoint* is to inform the system which competitor arrives at that specific location, *timestamping* that check-in. Checkpoints are multimodal and fully configurable. They can be designed and implemented with different IoT components to satisfy the requirements of the race and the organizers.
 
 This pilot includes several *checkpoints* with different devices, platforms, and configurations. This serves to test a wide range of racing scenarios.
 
-* [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./rfid-reader-python/)
+
+#### 1.1.1. [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./checkpoints/rfid-reader-python)
 
 ![Checkpoint 1](./images/implementation/rfid_reader_case_open3.jpg)
 
-* [Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python](./bluetooth-keypad-python)
+This *Checkpoint* is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader controller, as well as the checkpoint are coded in Python. The MQTT Client is implemented using the **Paho** Python module. 
+
+It is important to understand that each competitor taking part in a competition is identified by two unique IDs: 
+
+1. the bib number: alphanumeric string that follows the organizers standards (it could be an alias, surname or bib number). In this case, an unsigned integer; and
+
+2. an EPC (Electronic Product Code) corresponding to the RFID tag attached to their bib number. This tag follows the EPC C1G2 (Class 1 Generation 2) standard.
+
+Check all the details and code in [Github page of this component](./checkpoints/rfid-reader-python).
+
+
+#### 1.1.2. [Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python](./checkpoints/bluetooth-keypad-python)
 
 ![Checkpoint 2](./images/implementation/raspberry+bluetooth+keypad.png)
 
-* [Checkpoint 3: IR Remote + Arduino Uno](./ir-arduino/)
+This is a cheap option of checkpoint implementation. 
 
+Athletics events are usually controlled by officials with different roles such as: judges, timekeepers and starters. Other competitions must rely on officials with other roles, even volunteers or marshals. This checkpoint enables officials and volunteers to register athletes at checkpoints using a simple physical keypad to type athlete's bib numbers.
+
+Since all athletes must wear a visible bib identifier, this implementation is compatible with the existing rules of official competitions. Keypad may be substituted by a complete keyboard. Of course, the keypad could be a capacitive screen (i.e., tablet, smartphone, etc.) but it is probed that data input operators are more efficient with physical typing devices. Also they may be robust, even waterproof. 
+
+Check all the details and code in [Github page of this component](./checkpoints/bluetooth-keypad-python).
+
+
+#### 1.1.3. [Checkpoint 3: IR Remote + Arduino Uno](./checkpoints/ir-arduino/)
+
+Having in mind a less optimistic scenario –low budget, few resources–, I've implemented another checkpoint using a different solution. This option would cost less than $50 and it's really easy to use. It can be developed with a components from a basic Arduino-like kit. 
+
+A system based on Infrared (IR) remote control, is not very reliable for our purpose since there must be a direct visual line between transmitter and receiver –likely TV remote controls. **More than a real solution, this is a proof of concept**.
+
+Check all the details and code in [Github page of this component](./checkpoints/ir-arduino).
+
+
+#### 1.1.4. MQTT publication
 
 *Checkpoints* send an MQTT message once an athlete arrives. It is of the `{checkpoint-ID}/checkpoint` topic:
 
@@ -64,12 +93,15 @@ For check-in messages, it is required the checkpoint identifier (some informatio
 
 Check more information about the [PubSub design in the project](./pubsub).
 
+
+#### 1.1.5. Scalability and further options
+
 Trying to expand the features and ecosystem of the platform, a mobile checkpoint was created with a Fona 3G module and an Arduino Lilypad. Check [more information about this checkpoint on the move](../tracking).
 
 ![Pseudo-checkpoint](./images/implementation/fona_crop.png)
 
 
-### Controller(s)
+### 1.2. Controller(s)
 
 A *Controller* is basically a Web application that enables competition management, including the processing of *check-ins* performed on checkpoints along the race course. There may be several controllers for different purposes, implementing different features. The controller of this pilot enables a complete management of the competition, from the registration and management of athletes, checkpoints, race, start list and visualizing the competition in real time.
 
@@ -85,7 +117,8 @@ Some other components such as the **MQTT Broker** are described in [a more detai
 
 The strongest point of Activ-Ioty Timekeeping is device independence so any kind of devices may be used to implement *checkpoints*. Likely *checkpoints*, *controllers* may be designed to manage the information to cover any competition requirement (e.g., relay races, multi-lap courses, time-trial races, and others). 
 
-## Technology and Standards
+
+## 1.3. Technology and Standards
 
 The cornerstone of Activ-IoTy Timekeeping is the implementation based on open standards. Since the platform is designed to allow different and heterogeneous devices and implementations, standard technologies are crucial for scalability, enhancement of the system, and also to preserve the integrity of data. 
 
@@ -99,7 +132,7 @@ In this sense, most of the tests were performed on WiFi access points, but the [
 
 On top of the Internet, the transport layer is composed mainly by [**TCP** or Transmission Control Protocol](https://en.wikipedia.org/wiki/Transmission_Control_Protocol). [**UDP** or User Datagram Protocol](https://en.wikipedia.org/wiki/User_Datagram_Protocol) is used for specific applications such as time synchronization through external [NTP (Network Time Protocol)](http://www.ntp.org/ntpfaq/NTP-s-def.htm) servers.
 
-### MQTT, key in communications
+### 1.3.1. MQTT, key in communications
 
 *Checkpoints*, *controllers* and the rest of the modules are based on the Pub/Sub (Publication/Subscription) paradigm. Since the distributed system needs reliability and there is a potential lack of quality of communications, the solution uses [MQTT (Message Queuing Telemetry Transport)](http://mqtt.org/) as messaging protocol. MQTT allows *Checkpoints* (publishers) to send messages to the *Controllers* (subscribers). A *broker*, up and running in a reliable environment, will be in charge of delivering those messages effectively. 
 
@@ -108,14 +141,14 @@ On top of the Internet, the transport layer is composed mainly by [**TCP** or Tr
 The MQTT broker is implemented and running on a reliable UP-Squared accessible through the port 1883 of activioty.ddns.net. Regarding security, this broker does not provide a secure channel. This is a clear breach in the system but was done on purpose to offer real-time demonstrations in this prototype (i.e. jury of the challenge could subscribe to the MQTT queue in order to check the real messages running on the system, [like in the example](http://www.youtube.com/watch?v=nTlSV7WbGoE)). In case of real operation, the broker would implement either user authentication and SSL-secured transmissions.
 
 
-### Web Standards
+### 1.3.2. Web Standards
 
 The system implements some examples of visualizations and operation on the system. The *Controller* manages a MongoDB where stores all the information produced by the system, including the MQTT messages about competitors' *check-ins* at *checkpoints*. Additional Web services may be exposed on top of that database, giving access to third parties to build additional services or products. Just as an example of this, the system may offer **[HTTP (Hypertext Transfer Protocol)](https://www.w3.org/Protocols/) RESTful services** to get race results. Value of data is clear, so this may increase the usefulness of the platform, enabling innovation in further developments (e.g., integration with social networks, better visualizations, etc.). 
 
 The final design was complemented by other specific top level standards that guarantee **interoperability among similar systems around the world**. The description of underlying entities of the database using the [**OpenTrack vocabularies**](https://w3c.github.io/opentrack-cg/), an initiative to model the domain of Athletics in a standard way. Through this **[Schema.org](http://schema.org)** based vocabulary (and taxonomies), the system describes athletes, clubs, competitions and results in a semantic way. Check the [results generated after the test](./controller/sample_results.jsonld) in **JSON-LD** format.
   
 
-## Applicability to industry
+## 2. Applicability to industry
 
 As mentioned before, the running/jogging market is growing every year and competitions happen everywhere at any time. There are many applications and products that probe the importance of competitiveness in this sport. For instance, most of the sports tracking mobile apps (Strava, Nike+, Endomondo, etc.) include gamification based on performances and rankings. So, Activ-IoTy is part of this trend. 
 
@@ -130,7 +163,7 @@ As shown in the tests, this pilot is fully functional, but not very robust –on
 As a next step, apart from evolving the hardware of the platform, the *controller* should implement APIs to communicate with the current commercial sports systems. Integration with other platforms is key to a quick success of the platform.  
 
 
-## Lessons learned
+## 3. Lessons learned
 
 1. From software development to hardware prototyping. Back in December, I oriented the design phase as a software project –I have some experience in this field. When I started prototyping the checkpoints I found many issues that drove me crazy. I expected some parts to be easier, from the basic configuration of a device (e.g., installing the right BIOS, operating system, and drivers for the Intel UpSquared took me a few hours before it worked perfectly), to understanding why some implementations didn't work as expected (e.g., feeding the RFID reader with lower amperage than recommended). So, for this kind of projects, one **have to take into account more variables than a simple project of software development**.                
 
