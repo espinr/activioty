@@ -36,7 +36,7 @@ Those components perform the timekeeping activities. They are 'virtual gates' wh
 This pilot includes several *checkpoints* with different devices, platforms, and configurations. This serves to test a wide range of racing scenarios.
 
 
-#### 1.1.1. [Checkpoint 1: RFID Reader + Raspberry Pi + Python](./checkpoints/rfid-reader-python)
+#### 1.1.1. Checkpoint 1: RFID Reader + Raspberry Pi + Python
 
 ![Checkpoint 1](./images/implementation/rfid_reader_case_open3.jpg)
 
@@ -51,7 +51,7 @@ It is important to understand that each competitor taking part in a competition 
 Check all the details and code in [Github page of this component](./checkpoints/rfid-reader-python).
 
 
-#### 1.1.2. [Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python](./checkpoints/bluetooth-keypad-python)
+#### 1.1.2. Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python
 
 ![Checkpoint 2](./images/implementation/raspberry+bluetooth+keypad.png)
 
@@ -64,7 +64,7 @@ Since all athletes must wear a visible bib identifier, this implementation is co
 Check all the details and code in [Github page of this component](./checkpoints/bluetooth-keypad-python).
 
 
-#### 1.1.3. [Checkpoint 3: IR Remote + Arduino Uno](./checkpoints/ir-arduino/)
+#### 1.1.3. Checkpoint 3: IR Remote + Arduino Uno
 
 Having in mind a less optimistic scenario –low budget, few resources–, I've implemented another checkpoint using a different solution. This option would cost less than $50 and it's really easy to use. It can be developed with a components from a basic Arduino-like kit. 
 
@@ -96,9 +96,11 @@ Check more information about the [PubSub design in the project](./pubsub).
 
 #### 1.1.5. Scalability and further options
 
-Trying to expand the features and ecosystem of the platform, a mobile checkpoint was created with a Fona 3G module and an Arduino Lilypad. Check [more information about this checkpoint on the move](../tracking).
+Trying to expand the features and ecosystem of the platform, a mobile checkpoint was created with a Fona 3G module and an Arduino Lilypad.
 
 ![Pseudo-checkpoint](./images/implementation/fona_crop.png)
+
+Check [more information about this checkpoint on the move](./tracking).
 
 
 ### 1.2. Controller(s)
@@ -106,12 +108,12 @@ Trying to expand the features and ecosystem of the platform, a mobile checkpoint
 A *Controller* is basically a Web application that enables competition management, including the processing of *check-ins* performed on checkpoints along the race course. There may be several controllers for different purposes, implementing different features. The controller of this pilot enables a complete management of the competition, from the registration and management of athletes, checkpoints, race, start list and visualizing the competition in real time.
 
 
-[![Activ-IoTy Controller screenshot](../images/controller/race.png)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
-Check the full video of a real example (at high speed) at http://www.youtube.com/watch?v=nTlSV7WbGoE
+[![Activ-IoTy Controller screenshot](./images/controller/race.png)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
+Check the [full video of a real example (at high speed) on YouTube](http://www.youtube.com/watch?v=nTlSV7WbGoE).
 
 Read more information [about the *Controller*](./controller) and its implementation.  
 
-Some other components such as the **MQTT Broker** are described in [a more detailed document about components](./components) of the project.
+Some other components such as the **MQTT Broker** are described in [a more detailed document about components](./components.md) of the project.
 
 > The strongest point of Activ-Ioty Timekeeping is scalability thanks to its design based on device independence and open standards.
 
