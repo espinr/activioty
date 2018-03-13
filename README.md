@@ -1,6 +1,6 @@
 # Activ-IoTy Timekeeping
 
-| A scalable open platform for sports timekeeping based on standard IoT technologies
+> A scalable open platform for sports timekeeping based on standard IoT technologies
 
 Activ-IoTy is a project, part of the **[Eclipse Open IoT Challenge 4.0](https://iot.eclipse.org/open-iot-challenge/)** aiming at enhancing sports timekeeping systems accurately, through IoT low-cost devices. ActivIoTy is an open set of tools for racing competitions (i.e., running, cycling, skating, and others) that provides easy-to-use tools for efficient timekeeping adapted to the nature of each race. ActivIoTy’s design is centered on rapid prototyping, open source, and standards. 
 

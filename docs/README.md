@@ -81,7 +81,7 @@ Read more information [about the *Controller*](./controller) and its implementat
 
 Some other components such as the **MQTT Broker** are described in [a more detailed document about components](./components) of the project.
 
-| The strongest point of Activ-Ioty Timekeeping is scalability thanks to its design based on device independence and open standards.
+> The strongest point of Activ-Ioty Timekeeping is scalability thanks to its design based on device independence and open standards.
 
 The strongest point of Activ-Ioty Timekeeping is device independence so any kind of devices may be used to implement *checkpoints*. Likely *checkpoints*, *controllers* may be designed to manage the information to cover any competition requirement (e.g., relay races, multi-lap courses, time-trial races, and others). 
 
@@ -121,7 +121,7 @@ As mentioned before, the running/jogging market is growing every year and compet
 
 It is important to say that *reliable timekeeping systems exist already*. Indeed, this is problem solved since years ago. We are used to seeing real-time results while we watch Athletics at the Olympic Games on TV. In this case, a few big companies provide timing services to Athletics Federations to cover these competitions. Those costs are not affordable for the majority of race organizers. Another problem is the lack of open standards in those solutions, so most of them are proprietary and closed.
 
-| Activ-IoTy Timekeeping brings innovation, new business opportunities and social benefits
+> Activ-IoTy Timekeeping brings innovation, new business opportunities and social benefits
 
 Because of this, Activ-IoTy takes advantage of this *running bubble*, enabling an open platform to enrich sports. As part of the *open* concept (i.e., open source, open hardware, open data, open standards), Activ-IoTy enables SMEs to develop new business opportunities, offering timekeeping services, including new devices and mechanisms, enhancing the final products and innovating. 
 
