@@ -27,7 +27,7 @@ The following diagram shows the main components of Activ-IoTy: **Checkpoints** a
 2. *Controller*(s) collects the information sent by the *Checkpoints* and processes the information. So, these are the MQTT *subscribers*.
 3. Other third-party *subscribers* may perform other activities (i.e., visualizations, integration with third-party services, etc.)  
 
-![Components of Activ-IoTy](../images/components/checkpoints-runners-black-report.png)
+![Components of Activ-IoTy](./images/components/checkpoints-runners-black-report.png)
 
 ### *Checkpoints* 
 
