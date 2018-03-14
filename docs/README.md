@@ -113,7 +113,7 @@ A *Controller* is basically a Web application that enables competition managemen
 [![Activ-IoTy Controller screenshot](./images/controller/race.png)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
 Check the [full video of a real example (at high speed) on YouTube](http://www.youtube.com/watch?v=nTlSV7WbGoE).
 
-Read more information [about the *Controller*](./controller) and its implementation.  
+Read more information [about the *Controller*](./controller) and its implementation. In case you **want to [test it](http://activioty.ddns.net)**, drop me an email and I'll send you the *admin* credentials. You could sign up the app, but with the role of *athlete*, so you won't be able to create and manage races (only *admin*s can do it).
 
 Some other components such as the **MQTT Broker** are described in [a more detailed document about components](./components.md) of the project.
 
