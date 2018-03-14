@@ -66,6 +66,8 @@ Check all the details and code in [Github page of this component](./checkpoints/
 
 #### 1.1.3. Checkpoint 3: IR Remote + Arduino Uno
 
+![IR Remote Control Checkpoint](./images/implementation/ir-control.jpg)
+
 Having in mind a less optimistic scenario –low budget, few resources–, I've implemented another checkpoint using a different solution. This option would cost less than $50 and it's really easy to use. It can be developed with a components from a basic Arduino-like kit. 
 
 A system based on Infrared (IR) remote control, is not very reliable for our purpose since there must be a direct visual line between transmitter and receiver –likely TV remote controls. **More than a real solution, this is a proof of concept**.
@@ -142,6 +144,8 @@ On top of the Internet, the transport layer is composed mainly by [**TCP** or Tr
 
 The MQTT broker is implemented and running on a reliable UP-Squared accessible through the port 1883 of activioty.ddns.net. Regarding security, this broker does not provide a secure channel. This is a clear breach in the system but was done on purpose to offer real-time demonstrations in this prototype (i.e. jury of the challenge could subscribe to the MQTT queue in order to check the real messages running on the system, [like in the example](http://www.youtube.com/watch?v=nTlSV7WbGoE)). In case of real operation, the broker would implement either user authentication and SSL-secured transmissions.
 
+![Intel UpSquared](./images/implementation/upsquared.jpg)
+*UpSquared Board used for prototyping and where servers are running* 
 
 ### 1.3.2. Web Standards
 
@@ -166,6 +170,8 @@ As a next step, apart from evolving the hardware of the platform, the *controlle
 
 
 ## 3. Lessons learned
+
+![Early notes](./images/implementation/early-notes.jpg)
 
 1. From software development to hardware prototyping. Back in December, I oriented the design phase as a software project –I have some experience in this field. When I started prototyping the checkpoints I found many issues that drove me crazy. I expected some parts to be easier, from the basic configuration of a device (e.g., installing the right BIOS, operating system, and drivers for the Intel UpSquared took me a few hours before it worked perfectly), to understanding why some implementations didn't work as expected (e.g., feeding the RFID reader with lower amperage than recommended). So, for this kind of projects, one **have to take into account more variables than a simple project of software development**.
 
