@@ -167,7 +167,7 @@ As a next step, apart from evolving the hardware of the platform, the *controlle
 
 ## 3. Lessons learned
 
-1. From software development to hardware prototyping. Back in December, I oriented the design phase as a software project –I have some experience in this field. When I started prototyping the checkpoints I found many issues that drove me crazy. I expected some parts to be easier, from the basic configuration of a device (e.g., installing the right BIOS, operating system, and drivers for the Intel UpSquared took me a few hours before it worked perfectly), to understanding why some implementations didn't work as expected (e.g., feeding the RFID reader with lower amperage than recommended). So, for this kind of projects, one **have to take into account more variables than a simple project of software development**.                
+1. From software development to hardware prototyping. Back in December, I oriented the design phase as a software project –I have some experience in this field. When I started prototyping the checkpoints I found many issues that drove me crazy. I expected some parts to be easier, from the basic configuration of a device (e.g., installing the right BIOS, operating system, and drivers for the Intel UpSquared took me a few hours before it worked perfectly), to understanding why some implementations didn't work as expected (e.g., feeding the RFID reader with lower amperage than recommended). So, for this kind of projects, one **have to take into account more variables than a simple project of software development**.
 
 2. *Community is key to the growth of IoT*. Developing new IoT solutions is a piece of cake. The Web is full of IoT enthusiasts aiming to help. I faced many issues during the implementation phase that were solved in minutes thanks to forums and blog posts on the Web. So, give attribution and share as well!! Eating my own dog food, code and documentation are available in the [Activ-IoTy Github Repository](https://github.com/espinr/activioty).  
 
@@ -179,7 +179,7 @@ As a next step, apart from evolving the hardware of the platform, the *controlle
 
 Plastic shouldn't shield too much the readings so I designed the protective case with the antenna on top of the rest of the components.
 
-![3D Printed Case for the RFID Reader](./images/implementation/rfid_reader_case_open3.jpg)
+![3D Printed Case for the RFID Reader](./images/implementation/rfid_reader_case_4.jpg)
 
 I was proud of the *professional* result… Until I tested it :-) All devices worked properly, but RFID reading range decreased to a few inches. It was used to do some tests in the field (as seen in the video), but that time, the system missed around the 75% of the tags. 
 
