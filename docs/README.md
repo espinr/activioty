@@ -107,7 +107,7 @@ Check [more information about this checkpoint on the move](./tracking).
 
 ### 1.2. Controller(s)
 
-A *Controller* is basically a Web application that enables competition management, including the processing of *check-ins* performed on checkpoints along the race course. There may be several controllers for different purposes, implementing different features. The controller of this pilot enables a complete management of the competition, from the registration and management of athletes, checkpoints, race, start list and visualizing the competition in real time.
+A *Controller* is basically a **responsive Web application** that enables competition management, including the processing of *check-ins* performed on checkpoints along the race course. There may be several controllers for different purposes, implementing different features. The controller of this pilot enables a complete management of the competition, from the registration and management of athletes, checkpoints, race, start list and visualizing the competition in real time.
 
 
 [![Activ-IoTy Controller screenshot](./images/controller/race.png)](http://www.youtube.com/watch?v=nTlSV7WbGoE)
