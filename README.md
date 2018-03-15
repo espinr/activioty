@@ -2,7 +2,7 @@
 
 > A scalable open platform for sports timekeeping based on standard IoT technologies
 
-Activ-IoTy is a project, part of the **[Eclipse Open IoT Challenge 4.0](https://iot.eclipse.org/open-iot-challenge/)** aiming at enhancing sports timekeeping systems accurately, through IoT low-cost devices. ActivIoTy is an open set of tools for racing competitions (i.e., running, cycling, skating, and others) that provides easy-to-use tools for efficient timekeeping adapted to the nature of each race. ActivIoTy’s design is centered on rapid prototyping, open source, and standards. 
+Activ-IoTy is a project, part of the **[Eclipse Open IoT Challenge 4.0](https://iot.eclipse.org/open-iot-challenge/)** aiming at enhancing sports timekeeping systems accurately, through IoT low-cost devices. ActivIoTy Timekeeping is an open set of tools for racing competitions (i.e., running, cycling, skating, and others) that provides easy-to-use tools for efficient timekeeping adapted to the nature of each race. ActivIoTy Timekeeping’s design is centered on rapid prototyping, open source, and standards. 
 
 [![IoT Challenge 4.0](./docs/images/rfid_case_challenge_video.jpg)](https://youtu.be/2j3yzmwb5g8)
 
@@ -13,11 +13,11 @@ Read the [final report](./docs/) or [watch the video](https://youtu.be/2j3yzmwb5
 
 ![Activ-IoTy Infographic][infographic]
 
-* **Open timekeeping**: Running, cycling, skating… are sports where reliable timekeeping is crucial. Current solutions are proprietary and not interoperable. ActivIoTy is a platform that enables efficient sports timekeeping based on open standards.
+* **Open timekeeping**: Running, cycling, skating… are sports where reliable timekeeping is crucial. Current solutions are proprietary and not interoperable. ActivIoTy Timekeeping is a platform that enables efficient sports timekeeping based on open standards.
 
    [Protocols and foundations of Activ-IoTy](./docs/protocols.md)
   
-* **Low cost**: ActivIoTy design is focused on low-cost devices. The system is modular and supports light-performance systems (e.g., Arduino, Raspberry Pi,…). Flexibility and scalability is a must, so it will enable integration with other external timekeeping and competition management systems.
+* **Low cost**: ActivIoTy Timekeeping design is focused on low-cost devices. The system is modular and supports light-performance systems (e.g., Arduino, Raspberry Pi,…). Flexibility and scalability is a must, so it will enable integration with other external timekeeping and competition management systems.
 * ***Checkpoints***: Checkpoints are devices placed along the course that will register when competitors pass through a virtual gate. Competitors have unique IDs that will be stored with a timestamp. That information will be stored locally and  send to a MQTT queuing system.
 
    [MQTT and Workflow of Activ-IoTy](./docs/pubsub.md)
@@ -45,5 +45,5 @@ Read the [final report](./docs/) or [watch the video](https://youtu.be/2j3yzmwb5
 
 Check more information about the [components of Activ-IoTy](./docs/components.md)
 
-[mainlogo]: ./docs/images/logo/activIoTy.svg "Logo of ActivIoTy"
-[infographic]: ./docs/images/infographic.png "Components of ActivIoTy"
+[mainlogo]: ./docs/images/logo/activIoTy.svg "Logo of ActivIoTy Timekeeping"
+[infographic]: ./docs/images/infographic.png "Components of ActivIoTy Timekeeping"

@@ -9,7 +9,7 @@ It is important to understand that each competitor taking part in a competition 
 
 ## IND903 UHF RFID Reader
 
-This *checkpoint* of ActivIoTy is configured to read RFID Gen 2 tags that identify competitors. In the case of running races, competitors will wear paper bib numbers with RFID tags attached to them.
+This *checkpoint* of ActivIoTy Timekeeping is configured to read RFID Gen 2 tags that identify competitors. In the case of running races, competitors will wear paper bib numbers with RFID tags attached to them.
 
 The chosen solution is based on the [IND903 UHF RFID reader module](./specs/specification-IND903.pdf). The IND903 is a small reader module, operating in the 902-928MHz (US) frequency and 865.6-867.6MHz (Europe). It works over the EPC global UHF Class 1 Gen 2 (ISO 18000-6C) protocol through a USB serial Interface. The operating voltage (DC 3.5V – 5V), operating temperature (-20°C to +70°C), performance (50 tags per second during an inventory, and a label buffer of 200 labels), and low consumption (110mA at 3.5V – 18 dBm Output，25°C) makes this module appropriate for the requirements of the project.
 
@@ -19,7 +19,7 @@ The EPC C1G2 RFID tags will store data that identifies competitors. The memory b
 
 ### RFID Reading Serial Protocol 
 
-The RFID module implements a specific USB serial protocol. It brings along specific configuration software, and a SDK to control all the complete [functions](./specs/IND903_UHF_RFID_reader_module_protocol_V2.2_en) of the reader. The SDK is designed for the Windows platform and works nicely, but ActivIoTy aims at running on multi-platform devices. So, I had to build my own drivers adapted to the project needs.
+The RFID module implements a specific USB serial protocol. It brings along specific configuration software, and a SDK to control all the complete [functions](./specs/IND903_UHF_RFID_reader_module_protocol_V2.2_en) of the reader. The SDK is designed for the Windows platform and works nicely, but ActivIoTy Timekeeping aims at running on multi-platform devices. So, I had to build my own drivers adapted to the project needs.
 
 Commands and responses consist of byte streams. The lengths of the streams are variable, and the packets are checked by checksum (function in the [specs](./specs/IND903_UHF_RFID_reader_module_protocol_V2.2_en)).
 

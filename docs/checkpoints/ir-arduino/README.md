@@ -88,7 +88,7 @@ void setup() {
   pinMode(LED_GREEN, OUTPUT);
   pinMode(LED_RED, OUTPUT);
   myReceiver.enableIRIn();
-  Serial.println(F("[ActivIoTy] IR reader started"));
+  Serial.println(F("[ActivIoTy Timekeeping] IR reader started"));
 }
 
 void blinkLED(int led, int delayms) {

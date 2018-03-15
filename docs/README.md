@@ -40,7 +40,7 @@ This pilot includes several *checkpoints* with different devices, platforms, and
 
 ![Checkpoint 1](./images/implementation/rfid_reader_case_open3.jpg)
 
-This *Checkpoint* is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader controller, as well as the checkpoint are coded in Python. The MQTT Client is implemented using the **Paho** Python module. 
+This *Checkpoint* is based on a **IND903 UHF RFID Reader**, connected to a **Raspberry Pi** (or a **Intel Up Squared**). The reader controller, as well as the checkpoint are coded in Python. The MQTT Client is implemented using the **Paho** Python module.  
 
 It is important to understand that each competitor taking part in a competition is identified by two unique IDs: 
 
@@ -50,6 +50,7 @@ It is important to understand that each competitor taking part in a competition 
 
 Check all the details and code in [Github page of this component](./checkpoints/rfid-reader-python).
 
+The cost magnitude of this checkpoint depends on the antenna. The cost of the implementation of this pilot was around $150 (including RFID reader, sample tags, (5-6m reading range) antenna plus Rasberry Pi).
 
 #### 1.1.2. Checkpoint 2: Bluetooth Keypad + Raspberry Pi + Python
 
@@ -57,12 +58,13 @@ Check all the details and code in [Github page of this component](./checkpoints/
 
 This is a cheap option of checkpoint implementation. 
 
-Athletics events are usually controlled by officials with different roles such as: judges, timekeepers and starters. Other competitions must rely on officials with other roles, even volunteers or marshals. This checkpoint enables officials and volunteers to register athletes at checkpoints using a simple physical keypad to type athlete's bib numbers.
+Athletics events are usually controlled by officials with different roles such as: judges, timekeepers and starters. Other competitions must rely on officials with other roles, even volunteers or marshals. This checkpoint enables officials and volunteers to register athletes at checkpoints using a simple physical keypad to type athlete's bib numbers. 
 
 Since all athletes must wear a visible bib identifier, this implementation is compatible with the existing rules of official competitions. Keypad may be substituted by a complete keyboard. Of course, the keypad could be a capacitive screen (i.e., tablet, smartphone, etc.) but it is probed that data input operators are more efficient with physical typing devices. Also they may be robust, even waterproof. 
 
 Check all the details and code in [Github page of this component](./checkpoints/bluetooth-keypad-python).
 
+The cost of this checkpoint is below $50.
 
 #### 1.1.3. Checkpoint 3: IR Remote + Arduino Uno
 

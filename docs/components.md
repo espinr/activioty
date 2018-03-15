@@ -1,10 +1,10 @@
 # Components
 
-![components](Components of ActivIoTy)
+![components](Components of ActivIoTy Timekeeping)
 
 ## *Checkpoints* and *Controller*
 
-These are the main pieces of ActivIoTy. The **Controller** is a server that manages and controls the timekeeping system. It stores basic information about each race such as `startDateTime` (timestamp with the official starting time) and the configuration of the `itinerary` of the running course. The itinerary is a sequence of one or more **Checkpoints** where runners must go to and check-in in order to complete the race.
+These are the main pieces of ActivIoTy Timekeeping. The **Controller** is a server that manages and controls the timekeeping system. It stores basic information about each race such as `startDateTime` (timestamp with the official starting time) and the configuration of the `itinerary` of the running course. The itinerary is a sequence of one or more **Checkpoints** where runners must go to and check-in in order to complete the race.
 
 Thus, *Checkpoints* are virtual gates located along the course of the race where runners must go through. Checkpoints register the competitor's ID and a timestamp that marks the official check time at that point of the race. **Checkpoints** must indicate the **Controller** that are in operation and they will send all the information to the **Controller**. 
 
@@ -21,7 +21,7 @@ Eclipse [Mosquitto](https://mosquitto.org/) is the implementation selected for t
 
 ## Personae
 
-Three main roles will operate ActivIoTy:
+Three main roles will operate ActivIoTy Timekeeping:
 
 * **Admin**: The person in charge of setting up the system (i.e., definition of checkpoints itinerary, assigning IDs to competitors, and others).
 * **Official**: The person that will control the race, acting as starter of the race (e.g., setting `startDateTime`).
@@ -34,14 +34,14 @@ Synchronization of both *Checkpoints* and *Controller* is the cornerstone of the
 
 ## MQTT Reliability
 
-Reliability is more important than efficiency in this project. Some checkpoints may have a poor internet connection and suffer interruptions, so ActivIoTy uses the MQTT protocol to guarantee the completeness of data. The system will implement **QoS 1 (at least once)**. Using QoS level 1, it is guaranteed that a message will be delivered at least once to the receiver. Messages can be delivered more than once but this will be taken into account and solved by the *Controller*.  
+Reliability is more important than efficiency in this project. Some checkpoints may have a poor internet connection and suffer interruptions, so ActivIoTy Timekeeping uses the MQTT protocol to guarantee the completeness of data. The system will implement **QoS 1 (at least once)**. Using QoS level 1, it is guaranteed that a message will be delivered at least once to the receiver. Messages can be delivered more than once but this will be taken into account and solved by the *Controller*.  
 
 
 ## HTTP Server
 
-There is a public HTTP server that publish information about the system and enable the full configuration of ActivIoTy. This is the main interface either for public users and administrators. This server may deploy subsequent services built on top of ActivIoTy (e.g., social network integration, direct publication to media agencies, etc.).
+There is a public HTTP server that publish information about the system and enable the full configuration of ActivIoTy Timekeeping. This is the main interface either for public users and administrators. This server may deploy subsequent services built on top of ActivIoTy Timekeeping (e.g., social network integration, direct publication to media agencies, etc.).
 
 Information will be published using Web Standards that guarantee interoperability.
 
 
-[components]: ./images/components/checkpoints.png "Components in the ActivIoTy system"
+[components]: ./images/components/checkpoints.png "Components in the ActivIoTy Timekeeping system"

@@ -1,4 +1,4 @@
-# ActivIoTy - MQTT and Workflow 
+# ActivIoTy Timekeeping - MQTT and Workflow 
 
 The platform is based on the pub-sub paradigm. This means that some components (*publishers* or *senders*) send messages to a central point, called *broker*, that delivers the messages to other components (*subscribers* or *receivers*) interested in receiving the information send by the *publishers*.
 
@@ -8,13 +8,13 @@ Just as a reminder of what the system does:
 2. *Controller*(s) collect the information sent by *Checkpoints* and process the information. So, this is one of the *subscribers*.
 3. Other *subscribers* may perform other activities (i.e., visualizations, integration with third party services, etc.)  
 
-![pubsub](ActivIoTy PubSub Process)
+![pubsub](ActivIoTy Timekeeping PubSub Process)
 
 ## MQTT
 
 > It's a good choice for systems where we need to share small code messages, and the network bandwidth may be limited
 
-This mechanism is implemented using [MQTT 3.1.1](http://mqtt.org/), an OASIS standard that is widely adopted by industries and IoT solutions. MQTT is a light-weight protocol suitable for Activity, due to the flexibility requirements regarding the conditions where *Checkpoints* operates. MQTT guarantees connections with remote locations. It's a good choice for systems where we need to share small code messages, and the network bandwidth may be limited. So, it's a perfect choice for ActivIoTy.
+This mechanism is implemented using [MQTT 3.1.1](http://mqtt.org/), an OASIS standard that is widely adopted by industries and IoT solutions. MQTT is a light-weight protocol suitable for Activity, due to the flexibility requirements regarding the conditions where *Checkpoints* operates. MQTT guarantees connections with remote locations. It's a good choice for systems where we need to share small code messages, and the network bandwidth may be limited. So, it's a perfect choice for ActivIoTy Timekeeping.
 
 MQTT ensures the data is delivered properly to *subscribers*. The *broker* is in charge of delivers messages, according to three [Quality of Service (QoS) levels](http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc398718099): 
 
@@ -22,7 +22,7 @@ MQTT ensures the data is delivered properly to *subscribers*. The *broker* is in
 * **QoS 1: At least once delivery**. This quality of service ensures that the message arrives at the receiver at least once.
 * **QoS 2: Exactly once delivery**. This is the highest quality of service, for use when neither loss nor duplication of messages are acceptable.
      
-Since ActivIoTy needs to satisfy completeness and integrity of data gathered by *Checkpoints*, the chosen QoS level is **QoS 1 (At least once delivery)**. QoS 2 would be also adequate but it increases the overhead of communications. There may be duplicates, that will be filtered by receivers without too much cost associated.
+Since ActivIoTy Timekeeping needs to satisfy completeness and integrity of data gathered by *Checkpoints*, the chosen QoS level is **QoS 1 (At least once delivery)**. QoS 2 would be also adequate but it increases the overhead of communications. There may be duplicates, that will be filtered by receivers without too much cost associated.
 
 ## Topics and Messages
 
@@ -135,8 +135,8 @@ Do not forget to open that port on your firewall to make it available from outsi
 
 ### Paho 
 
-*Checkpoints* are implemented using [Eclipse Paho](https://www.eclipse.org/paho/). Paho provides open-source client implementations of MQTT protocols for any platform. Paho implementations may be deployed on all checkpoint modules of ActivIoTy: Raspberry + Python; UP<sup>2</sup> Squared + Python/embedded C; Arduino + embedded C).
+*Checkpoints* are implemented using [Eclipse Paho](https://www.eclipse.org/paho/). Paho provides open-source client implementations of MQTT protocols for any platform. Paho implementations may be deployed on all checkpoint modules of ActivIoTy Timekeeping: Raspberry + Python; UP<sup>2</sup> Squared + Python/embedded C; Arduino + embedded C).
 
 Paho is also the base for the implementation of the *Controller* (subscriber), coded in Node.js. 
 
-[pubsub]: ./images/components/pubsub.png "ActivIoTy PubSub Process"
+[pubsub]: ./images/components/pubsub.png "ActivIoTy Timekeeping PubSub Process"
