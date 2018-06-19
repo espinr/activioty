@@ -19,6 +19,8 @@ Just as an example, in the following image of the Kenyan Cross Country Champions
 ![National Cross Country Championship in Kenya](./images/intro/kenya_xc.png)
 Winners of the Kenyan Cross Country Championship 2018
 
+### The solution
+
 Activ-IoTy Timekeeping is a system that the concepts of rapid prototyping and Internet of Things to develop a modular low-cost solution for timekeeping and competition management. This system is based on standard technologies that enable **plug and play different devices** and share information with external servers to process the results, records, etc.
 
 The following diagram shows the main components of Activ-IoTy: **Checkpoints** and **Controller(s)**.
