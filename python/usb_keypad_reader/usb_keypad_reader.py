@@ -5,6 +5,9 @@ Created on Jan 30, 2018
 '''
 
 from reader import reader
+from termcolor import cprint
+from pyfiglet import figlet_format
+
 
 
 class USBKeypadReader(reader.Reader):
@@ -34,5 +37,8 @@ class USBKeypadReader(reader.Reader):
             bibId = ''
             while bibId.strip() == '':
                 bibId = input('\nBib number? > ')
-            print('Read ' + bibId)
+                if ('-' in bibId) or ('*' in bibId):
+                    cprint(figlet_format('BIB NO SET!!', font='small'), 'white', 'on_red', attrs=['bold'])        
+                    bibId = ''
+            cprint(figlet_format(bibId, font='starwars'), 'white', 'on_green', attrs=['bold'])
             processCallback(None, bibId.strip())   

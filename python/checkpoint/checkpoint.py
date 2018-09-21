@@ -7,7 +7,12 @@ Created on Jan 30, 2018
 '''
 from distutils.command.check import check
 import json
+import sys
 import math
+import threading
+from colorama import init
+from termcolor import cprint
+from pyfiglet import figlet_format
 from time import ctime
 from time import gmtime
 import time
@@ -29,6 +34,7 @@ class Checkpoint(object):
         :param mqttBrokerHost: String with the hostname of the MQTT broker
         :param mqttBrokerPort: (int) with the port of the MQTT broker (1883 by default)
         '''
+        init(strip=not sys.stdout.isatty())
         self.id = id
         self.reader = reader
         self.mqttBrokerHost = mqttBrokerHost
@@ -39,28 +45,36 @@ class Checkpoint(object):
         '''
         Method to be called once a competitor do a check-in. 
         This is a callback method to be send to the reader. 
-        It sends a MQTT message to the broker
+        It sends a MQTT message to the broker like this:
+        {"checkpoint" : {"id" : "RFID_IND903"}, "timestamp" : 1536508802, "bib": "121"}
         :param idCompetitor: String with the ID of the competitor that the reader detected.
-        '''
-        competitor = {}
+        '''            
+        messageCheckin = { "checkpoint": { "id": self.id }, "timestamp": self.getTimestamp() }
         if (idCompetitorEPC != None):
-            competitor["epc"] = idCompetitorEPC; 
+            messageCheckin["epc"] = idCompetitorEPC; 
         if (idCompetitorBibNumber != None):
-            competitor["bib"] = idCompetitorBibNumber;
-            
-        messageCheckin = { "checkpoint" : self.id , "timestamp" : self.getTimestamp(), "competitor" : competitor }
+            messageCheckin["bib"] = idCompetitorBibNumber;
+
         topic = self.id + "/" + self.TOPIC_CHECKIN
         publish.single(topic, json.dumps(messageCheckin), hostname=self.mqttBrokerHost)
-        print(topic + " topic to MQTT:")
-        print(json.dumps(messageCheckin))
-        
-    def execute(self):
-        messageReady = { "checkpoint" : self.id , "timestamp" : self.getTimestamp() }  
+#        print(topic + " topic to MQTT:")
+#        print(json.dumps(messageCheckin))
+
+    def pingReadyMessages(self):
+        '''
+        Method that sends a ready message to the broker every 30"
+        Ready message like this:   {"checkpoint" : {"id" : "001"}, "timestamp" : 1535524129}
+        It's executed in a separate thread
+        '''
+        messageReady = { "checkpoint": { "id": self.id } , "timestamp" : self.getTimestamp() }  
         topic = self.id + "/" + self.TOPIC_READY
         publish.single(topic, json.dumps(messageReady), hostname=self.mqttBrokerHost)
-        print(topic + " topic to MQTT:")
-        print(json.dumps(messageReady))        
+        threading.Timer(30, self.pingReadyMessages).start()
+        
+    def execute(self):
+        self.pingReadyMessages()
         self.reader.initialize()
+        cprint(figlet_format(self.id, font='doom'), 'yellow', 'on_blue', attrs=['bold'])
         self.reader.doInventory(self.checkinCompetitor)
 
     def getOffsetNTPTime(self):
